@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 15, 23, 42;
+  --background-rgb: 241, 245, 249;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.calc-input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900 text-sm;
+}
+
+.calc-label {
+  @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+.calc-btn {
+  @apply px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium text-sm disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.calc-btn-secondary {
+  @apply px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors duration-200 font-medium text-sm;
+}
+
+.result-card {
+  @apply bg-blue-50 border border-blue-200 rounded-lg p-4 mt-4;
+}
+
+.result-row {
+  @apply flex justify-between items-center py-1 text-sm;
+}
+
+.result-total {
+  @apply flex justify-between items-center py-2 text-base font-bold border-t border-blue-300 mt-2;
+}
